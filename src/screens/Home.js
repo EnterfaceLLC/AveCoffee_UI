@@ -2,15 +2,15 @@
 import { SafeAreaView, View, Text } from 'react-native';
 
 //* STYLES IMPORT //
-import { styles, AndroidView } from '../styles/Profile';
+import { styles, AndroidView } from '../styles/Home';
 
-//* PROFILE SCREEN CODE //
-const Profile = () => {
+//* HOME SCREEN CODE //
+const Home = () => {
   return (
     <SafeAreaView style={[AndroidView, styles.container]}>
-      <Text>Profile</Text>
+      <Text>Home Screen</Text>
     </SafeAreaView>
   );
 };
 
-export default Profile;
+export default Home;

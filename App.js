@@ -1,9 +1,15 @@
+//* EXPO IMPORTS //
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
-import { useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 
+//* RN IMPORT //
+import { useCallback } from 'react';
+
+//* ROOT NAVIGATION IMPORT //
+import RootNav from './src/util/RootNav';
+
+//* APP CODE //
 export default function App() {
 
   const [fontsLoaded] = useFonts({
@@ -24,22 +30,6 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Avenue Coffee Co.</Text>
-      <StatusBar style="auto" />
-    </View>
+    <RootNav />
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontFamily: 'bellota_regular',
-    fontSize: 40
-  }
-});
+};
