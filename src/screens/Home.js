@@ -7,6 +7,8 @@ import { Ionicons, Fontisto } from '@expo/vector-icons';
 
 //* COMPONENT IMPORTS //
 import { Welcome } from '../components';
+import Carousel from '../components/Home/Carousel';
+import Heading from '../components/Home/Heading';
 
 //* HOME SCREEN CODE //
 const Home = () => {
@@ -27,8 +29,11 @@ const Home = () => {
           </View>
         </View>
       </View>
+
       <ScrollView>
         <Welcome />
+        <Carousel />
+        <Heading />
       </ScrollView>
     </SafeAreaView>
   );
