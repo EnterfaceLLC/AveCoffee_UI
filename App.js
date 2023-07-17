@@ -14,6 +14,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     advent_light: require('./assets/fonts/AdventPro-Light.ttf'),
     advent_regular: require('./assets/fonts/AdventPro-Regular.ttf'),
+    advent_semiB: require('./assets/fonts/AdventPro-SemiBold.ttf'),
     bellota_light: require('./assets/fonts/BellotaText-Light.ttf'),
     bellota_regular: require('./assets/fonts/BellotaText-Regular.ttf'),
   });

@@ -6,7 +6,7 @@ import { styles, AndroidView } from '../styles/ProdSearch';
 import { COLORS, SIZES } from '../../theme';
 import { Feather, Ionicons } from '@expo/vector-icons';
 
-//* PRODUCT SEARCH SCREEN CODE //
+//* PRODUCT SEARCH SCREEN //
 const ProdSearch = () => {
   return (
     <SafeAreaView style={[AndroidView, styles.container]}>

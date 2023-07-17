@@ -13,7 +13,7 @@ const Android = Platform.OS === 'android';
 export const styles = StyleSheet.create({
   container: {
     marginHorizontal: 20,
-    marginTop: 20,
+    marginTop: 10,
   },
   headBar: {
     flexDirection: 'row',
@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
   location: {
     fontFamily: 'advent_regular',
     fontSize: SIZES.medium,
-    color: COLORS.grey,
+    color: COLORS.alternate,
   },
   qtyContainer: {
     alignItems: 'flex-end',

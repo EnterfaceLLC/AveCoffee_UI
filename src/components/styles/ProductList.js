@@ -12,13 +12,11 @@ const Android = Platform.OS === 'android';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
+    marginTop: SIZES.medium,
+    marginLeft: 12,
   },
-  imgComponent: {
-    borderRadius: 15,
-    width: "90%",
-    marginTop: 10,
+  list: {
+    columnGap: SIZES.medium,
   },
 });
 

@@ -1,5 +1,5 @@
 //* RN IMPORTS //
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 //* IMG SLIDER BOX IMPORT //
 import { SliderBox } from 'react-native-image-slider-box';

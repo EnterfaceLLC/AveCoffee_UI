@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     color: color,
     marginTop: mTop,
     marginHorizontal: 10,
-    fontSize: SIZES.xxLarge,
+    fontSize: SIZES.xxLarge - 5,
     fontFamily: 'advent_regular',
   }),
   searchContainer: {
@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
   },
   searchIcon: {
     marginHorizontal: 10,
-    color: COLORS.grey,
+    color: COLORS.alternate,
   },
   searchWrapper: {
     flex: 1,
