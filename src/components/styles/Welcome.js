@@ -5,16 +5,22 @@ import { StyleSheet, Dimensions, StatusBar, Platform } from "react-native";
 const { height, width } = Dimensions.get('window');
 
 //* THEME IMPORT//
-import { COLORS, SIZES } from "../../theme";
+import { COLORS, SIZES } from '../../../theme';
 
 //* STYLES CODE//
 const Android = Platform.OS === 'android';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: COLORS.primary,
+    width: '100%',
   },
+  text: (color, mTop) => ({
+    color: color,
+    marginTop: mTop,
+    marginHorizontal: 10,
+    fontSize: SIZES.xxLarge,
+    fontFamily: 'advent_regular',
+  }),
   searchContainer: {
     height: 50,
     flexDirection: 'row',
