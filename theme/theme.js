@@ -9,6 +9,7 @@ const COLORS = {
   tertiary: "#A78A7F", //* Beaver //
   alternate: "#735751", //* Liver //
   highlight: "#8C1C13", //* Dark Red //
+  rating: "#2E5266", //*
 
   grey: "#83829A",
   grey2: "#C1C0C8",

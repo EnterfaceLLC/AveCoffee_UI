@@ -26,7 +26,7 @@ const ProductCard = (prods) => {
 
         <View style={styles.details}>
           <Text style={styles.title} numberOfLines={1}>Expresso Bliss</Text>
-          <Text style={styles.brand} numberOfLines={1}>Product</Text>
+          <Text style={styles.brand} numberOfLines={1}>Hot Brew</Text>
           <Text style={styles.price}>$8.99</Text>
         </View>
         <TouchableOpacity style={styles.addBtn}>

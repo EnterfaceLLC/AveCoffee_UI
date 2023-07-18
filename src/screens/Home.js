@@ -26,7 +26,7 @@ const Home = () => {
               <Text style={styles.qty}>7</Text>
             </View>
             <TouchableOpacity>
-              <Fontisto name='shopping-bag' size={24} />
+              <Fontisto name='shopping-bag' size={24} color={COLORS.rating} />
             </TouchableOpacity>
           </View>
         </View>
