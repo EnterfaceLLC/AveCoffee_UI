@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 
 //* RN NAVIGATION //
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 //* STYLES, THEME, ICON IMPORT //
 import { styles } from '../styles/ProductDetails';
@@ -12,6 +12,10 @@ import { Ionicons, MaterialCommunityIcons, SimpleLineIcons, Fontisto } from '@ex
 
 //* PRODUCT DETAILS SCREEN //
 const ProdDetails = () => {
+
+  const route = useRoute();
+  const { prod } = route.params;
+  // console.log('Route Params:', prod);
 
   const navigation = useNavigation();
 
@@ -41,16 +45,13 @@ const ProdDetails = () => {
 
       <Image
         style={styles.img}
-        source={{
-          uri:
-            'https://res.cloudinary.com/lmr-media/image/upload/v1689589809/Ave%20Coffee%20Co/pexels-valeriia-miller-3020919_lquqtz.jpg'
-        }}
+        source={{ uri: prod.imageUrl }}
       />
       <View style={styles.detailContainer}>
         <View style={styles.titleBar}>
-          <Text style={styles.title}>Expresso Bliss'</Text>
+          <Text style={styles.title}>{prod.title}</Text>
           <View style={styles.priceWrapper}>
-            <Text style={styles.price}>$ 8.99</Text>
+            <Text style={styles.price}>$ {prod.price}</Text>
           </View>
         </View>
 
@@ -82,7 +83,7 @@ const ProdDetails = () => {
         <View style={styles.descWrapper}>
           <Text style={styles.descTitle}>How Its Made</Text>
           <Text style={styles.descText}>
-            Immerse yourself in the refined indulgence of our Espresso Coffee hot beverage, meticulously handcrafted from the finest Arabica coffee beans. Each sip unveils a harmonious symphony of robust flavors, crowned by a velvety crema that dances on the palate.
+            {prod.description}
           </Text>
         </View>
 
@@ -90,7 +91,7 @@ const ProdDetails = () => {
           <View style={styles.location}>
             <View style={styles.locationGrp}>
               <Ionicons name='location-outline' size={20} />
-              <Text>Topeka, Ks</Text>
+              <Text>{prod.product_location}</Text>
             </View>
             <View style={styles.locationGrp}>
               <Ionicons name='card-outline' size={20} />

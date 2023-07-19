@@ -1,25 +1,39 @@
 //* RN IMPORTS //
-import { FlatList, View } from 'react-native';
+import { FlatList, View, Text, ActivityIndicator } from 'react-native';
 
-//* STYLES IMPORT //
-import { styles } from '../styles/ProductList';
+//* CUSTOM HOOKS IMPORT //
+import useFetch from '../../hook/useFetch';
+
+//* COMPONENT IMPORT //
 import ProductCard from './ProductCard';
+
+//* STYLES, THEME IMPORT //
+import { styles } from '../styles/ProductList';
+import { SIZES } from '../../../theme';
 
 //* PRODUCT LIST COMPONENT //
 const ProductList = () => {
 
-  const products = [
-    1, 2, 3, 4, 5
-  ]
+  const { data, loading, error } = useFetch();
+  // console.log('Response Data:', data);
 
   return (
     <View style={styles.container}>
-      <FlatList
-        data={products}
-        renderItem={({ item }) => (<ProductCard prods={item} />)}
-        contentContainerStyle={styles.list}
-        horizontal
-      />
+      {
+        loading ? (
+          <ActivityIndicator size={SIZES.xLarge} />
+        ) : error ? (
+          <Text>Something Went Wrong!</Text>
+        ) : (
+          <FlatList
+            data={data}
+            keyExtractor={(item) => item._id}
+            renderItem={({ item }) => (<ProductCard prod={item} />)}
+            contentContainerStyle={styles.list}
+            horizontal
+          />
+        )
+      }
     </View>
   );
 };
