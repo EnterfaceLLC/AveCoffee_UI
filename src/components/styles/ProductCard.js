@@ -12,7 +12,7 @@ const Android = Platform.OS === 'android';
 
 export const styles = StyleSheet.create({
   container: {
-    width: 180,
+    width: 170,
     height: 240,
     marginEnd: 10,
     marginBottom: 50,
@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
   },
   imgContainer: {
     flex: 1,
-    width: 168,
+    width: 158,
     marginLeft: SIZES.small / 2,
     marginTop: SIZES.small / 2,
     borderRadius: SIZES.small,

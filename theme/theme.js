@@ -19,7 +19,7 @@ const COLORS = {
   white: "#FFFFFF",
   black: "#000000",
   error: "#e81e4d",
-  success: " #00C135",
+  success: "#00C135",
 };
 
 

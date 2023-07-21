@@ -16,6 +16,9 @@ const screenOptions = {
   tabBarShowLabel: false,
   tabBarHideKeyboard: true,
   headerShown: false,
+  tabBarStyle: {
+    backgroundColor: COLORS.off_white,
+  },
   // tabBarStyle: {
   //   position: 'absolute',
   //   bottom: 0,
