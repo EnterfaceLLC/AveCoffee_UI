@@ -5,6 +5,9 @@ import { useState } from 'react';
 //* AXIOS IMPORT //
 import axios from 'axios';
 
+//* COMPONENT IMPORT //
+import { SearchList } from '../components';
+
 //* STYLES, THEME, ICON IMPORT //
 import { styles, AndroidView } from '../styles/ProdSearch';
 import { COLORS, SIZES } from '../../theme';
@@ -64,7 +67,8 @@ const ProdSearch = () => {
           <FlatList
             data={searchResults}
             keyExtractor={(item) => item._id}
-            renderItem={({ item }) => (<Text>{item.title}</Text>)}
+            renderItem={({ item }) => (<SearchList prod={item} />)}
+            style={{ marginHorizontal: 12 }}
           />
         )
       }

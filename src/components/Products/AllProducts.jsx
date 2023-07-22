@@ -19,7 +19,7 @@ const AllProducts = () => {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size={SIZES.xxLarge + 200} color={COLORS.primary} />
+        <ActivityIndicator size={SIZES.xxLarge} color={COLORS.primary} />
       </View>
     );
   }
