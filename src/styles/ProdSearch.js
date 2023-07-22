@@ -13,7 +13,7 @@ const Android = Platform.OS === 'android';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.off_white,
   },
   searchContainer: {
     height: 50,
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
   },
   searchIcon: {
     marginHorizontal: 10,
-    color: COLORS.grey,
+    color: COLORS.alternate,
   },
   searchWrapper: {
     flex: 1,
@@ -49,6 +49,25 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLORS.alternate,
+  },
+  resultContain: {
+    flex: 1,
+  },
+  textContainer: {
+    position: 'absolute',
+    // top: SIZES.small,
+    left: SIZES.large,
+    zIndex: 1,
+  },
+  searchText: {
+    color: COLORS.black,
+    fontFamily: 'advent_regular',
+    fontSize: SIZES.xxLarge + 10,
+  },
+  searchImg: {
+    resizeMode: 'cover',
+    width: SIZES.width,
+    height: SIZES.height,
   }
 });
 

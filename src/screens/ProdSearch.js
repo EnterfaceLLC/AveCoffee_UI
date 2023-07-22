@@ -1,5 +1,9 @@
 //* RN IMPORTS //
-import { SafeAreaView, View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, TextInput, FlatList, Image } from 'react-native';
+import { useState } from 'react';
+
+//* AXIOS IMPORT //
+import axios from 'axios';
 
 //* STYLES, THEME, ICON IMPORT //
 import { styles, AndroidView } from '../styles/ProdSearch';
@@ -8,6 +12,20 @@ import { Feather, Ionicons } from '@expo/vector-icons';
 
 //* PRODUCT SEARCH SCREEN //
 const ProdSearch = () => {
+
+  const [searchKey, setSearchKey] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = async () => {
+    try {
+      const response = await axios.get(`http://192.168.0.187:5000/api/v1/products/search/${searchKey}`);
+      setSearchResults(response.data);
+
+    } catch (error) {
+      console.log("Failed to search products", error);
+    }
+  };
+
   return (
     <SafeAreaView style={[AndroidView, styles.container]}>
       <View style={styles.searchContainer}>
@@ -18,17 +36,38 @@ const ProdSearch = () => {
           <TextInput
             style={styles.input}
             placeholder='Search Our Brews'
-            value=''
-            onPressIn={() => { }}
+            value={searchKey}
+            onChangeText={setSearchKey}
           />
         </View>
 
         <View>
-          <TouchableOpacity style={styles.searchBtn}>
+          <TouchableOpacity style={styles.searchBtn} onPress={() => handleSearch()} >
             <Feather name='search' size={24} color={COLORS.off_white} />
           </TouchableOpacity>
         </View>
       </View>
+
+      {
+        searchResults.length === 0 ? (
+          <View style={styles.resultContain}>
+            {/* <View style={styles.textContainer}>
+              <Text style={styles.searchText}>Explore our</Text>
+              <Text style={styles.searchText}>Creations...</Text>
+            </View> */}
+            <Image
+              source={require('../../assets/search.jpg')}
+              style={styles.searchImg}
+            />
+          </View>
+        ) : (
+          <FlatList
+            data={searchResults}
+            keyExtractor={(item) => item._id}
+            renderItem={({ item }) => (<Text>{item.title}</Text>)}
+          />
+        )
+      }
 
     </SafeAreaView >
   );
