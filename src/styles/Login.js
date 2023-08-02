@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   },
   cover: {
     width: '100%',
-    height: height / 5,
+    height: height / 4,
     backgroundColor: COLORS.tertiary
   },
   avatarContainer: {
@@ -25,27 +25,27 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   avatar: {
-    width: 160,
-    height: 160,
-    borderRadius: 80,
+    width: 180,
+    height: 180,
+    borderRadius: 90,
     borderWidth: 3,
     borderColor: COLORS.off_white,
     resizeMode: 'cover',
     marginTop: -90
   },
   name: {
-    fontSize: 26,
+    fontSize: 30,
     fontFamily: 'advent_regular',
     marginVertical: 10,
   },
   loginBtn: {
-    width: 150,
+    // width: 150,
     padding: 5,
     alignItems: 'center',
     borderWidth: 0.5,
     borderColor: COLORS.off_white,
     borderRadius: SIZES.xxLarge,
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.alternate,
   },
   loginTxt: {
     fontFamily: 'advent_regular',
@@ -54,39 +54,20 @@ export const styles = StyleSheet.create({
     color: COLORS.off_white
   },
   userInfo: {
+    width: 150,
     padding: 5,
-    paddingHorizontal: 10,
     alignItems: 'center',
     borderWidth: 0.5,
     borderColor: COLORS.off_white,
     borderRadius: SIZES.xxLarge,
-    backgroundColor: COLORS.alternate,
+    backgroundColor: COLORS.primary,
   },
   infoTxt: {
     fontFamily: 'advent_regular',
-    fontSize: 16,
+    fontSize: 18,
     letterSpacing: 1,
     color: COLORS.off_white
   },
-  menuContainer: {
-    marginTop: SIZES.xLarge,
-    width: SIZES.width - SIZES.xxLarge,
-    backgroundColor: COLORS.off_white,
-    borderRadius: 12,
-  },
-  menuItem: (borderBottomWidth) => ({
-    borderBottomWidth: borderBottomWidth,
-    flexDirection: 'row',
-    paddingVertical: 15,
-    paddingHorizontal: 15,
-    borderColor: COLORS.alternate
-  }),
-  menuTxt: {
-    fontFamily: 'advent_regular',
-    fontSize: 20,
-    letterSpacing: 1,
-    marginLeft: 15
-  }
 });
 
 export const AndroidView = StyleSheet.create({

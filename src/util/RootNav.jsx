@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 import BottomNav from './BottomNav';
 
 //* SCREEN IMPORTS //
-import { Cart, ProdDetails, Spotlight } from '../screens';
+import { Cart, ProdDetails, Spotlight, Login } from '../screens';
 
 //* ROOT NAVIGATION CODE //
 const RootNav = () => {
@@ -45,6 +45,14 @@ const RootNav = () => {
         <Stack.Screen
           name='Spotlight'
           component={Spotlight}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          name='Login'
+          component={Login}
           options={{
             headerShown: false,
           }}
