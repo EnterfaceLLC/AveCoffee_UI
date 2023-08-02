@@ -6,5 +6,18 @@ import Cart from "./Cart";
 import ProdDetails from "./ProdDetails";
 import Spotlight from "./Spotlight";
 import Login from "./Login";
+import Favorites from "./Favorites";
+import Orders from "./Orders";
 
-export { Home, ProdSearch, Profile, Cart, ProdDetails, Spotlight, Login };
+//* SCREEN EXPORTS //
+export {
+  Home,
+  ProdSearch,
+  Profile,
+  Cart,
+  ProdDetails,
+  Spotlight,
+  Login,
+  Favorites,
+  Orders,
+};
