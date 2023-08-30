@@ -17,7 +17,7 @@ import { COLORS } from '../../theme';
 const Profile = () => {
 
   const [userData, setUserData] = useState(null);
-  const [userLogin, setUserLogin] = useState(true);
+  const [userLogin, setUserLogin] = useState(false);
 
   const navigation = useNavigation();
 
@@ -94,7 +94,7 @@ const Profile = () => {
 
           {
             userLogin === false ? (
-              <View><Text>Hi</Text></View>
+              <View></View>
             ) : (
               <View style={styles.menuContainer}>
                 <TouchableOpacity onPress={() => navigation.navigate('Favorites')}>
