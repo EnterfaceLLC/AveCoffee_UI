@@ -5,6 +5,7 @@ import ProductList from './Products/ProductList';
 import AllProducts from "./Products/AllProducts";
 import SearchList from "./Products/SearchList";
 import BackPress from "./BackPress";
+import Button from "./Button";
 
 //* COMPONENT EXPORTS //
 export {
@@ -13,5 +14,6 @@ export {
   ProductList,
   AllProducts,
   SearchList,
-  BackPress
+  BackPress,
+  Button
 };

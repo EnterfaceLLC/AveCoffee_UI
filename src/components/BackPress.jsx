@@ -10,7 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 const BackPress = ({ onPress }) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <Ionicons name='chevron-back-circle' size={50} color={COLORS.rating} />
+      <Ionicons name='chevron-back-circle' size={50} color={COLORS.primary} />
     </TouchableOpacity>
   );
 };
