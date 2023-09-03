@@ -23,6 +23,7 @@ const ProdSearch = () => {
     try {
       const response = await axios.get(`http://192.168.0.187:5000/api/v1/products/search/${searchKey}`);
       setSearchResults(response.data);
+      console.log(response);
 
     } catch (error) {
       console.log("Failed to search products", error);
